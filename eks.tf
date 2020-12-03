@@ -17,7 +17,7 @@ provider "kubernetes" {
 module "my-cluster" {
   source = "terraform-aws-modules/eks/aws"
   version = "12.0.0"
-  cluster_name = "${var.cluster_name}"
+  cluster = "${var.cluster}"
   cluster_version = "${var.cluster_version}"
   subnets = "${var.subnets}"
   vpc_id = "${var.vpc_id}"
